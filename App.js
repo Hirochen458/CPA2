@@ -3,9 +3,9 @@ const bodyPayser = require('body-parser');
 const app = express();
 var MongoClient = require('mongodb').MongoClient
 
-app.listen(3000,function(){
-        console.log('listening on 3000')
-    })
+// app.listen(3000,function(){
+//         console.log('listening on 3000')
+//     })
 
 app.use(bodyPayser.urlencoded({extended: true}))
 app.use(bodyPayser.json())
