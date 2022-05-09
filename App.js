@@ -15,7 +15,7 @@ app.use(bodyPayser.urlencoded({extended: true}))
 app.use(bodyPayser.json())
 app.use(express.static('public'))
 
-URL = process.env.mongodb_URL //'mongodb+srv://Hiro:1q2w3e@cluster0.lrztk.mongodb.net/CPA2retryWrites=true&w=majority'
+URL = 'mongodb+srv://Hiro:1q2w3e@cluster0.lrztk.mongodb.net/CPA2retryWrites=true&w=majority' //process.env.mongodb_URL
 mongoose.connect(URL, {useUnifiedTopology: true, useNewUrlParser: true}).then(client => {
     console.log('connected to DataBase')
 
