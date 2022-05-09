@@ -6,7 +6,7 @@ var MongoClient = require('mongodb').MongoClient
 // app.listen(3000,function(){
 //         console.log('listening on 3000')
 //     })
-const port = process.env.PORT || "5000";
+const port = process.env.PORT || "27017";
 console.log('connecting on port ' + port);
 app.set("port", port)
 

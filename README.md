@@ -4,7 +4,6 @@
 Brandeis University: COSI 103A - Fundamentals of Software Engineering
 
  This repository was created for class projects/assignments. It will primarily house the file contents of the CPA02 assignment, which contains a dataset of Brandeis course selections, professors, and etc.
- This repository was created for class projects/assignments. It will primarily house the file contents of the CPA02 assignment, which contains a dataset of Brandeis course selections, professors, and etc.
 
  Hiro Chen
  
