@@ -6,14 +6,20 @@ var MongoClient = require('mongodb').MongoClient
 // app.listen(3000,function(){
 //         console.log('listening on 3000')
 //     })
+const port = process.env.PORT || "5000";
+console.log('connecting on port ' + port);
+app.set("port", port)
 
 app.use(bodyPayser.urlencoded({extended: true}))
 app.use(bodyPayser.json())
 app.use(express.static('public'))
 
 URL = 'mongodb+srv://Hiro:1q2w3e@cluster0.lrztk.mongodb.net/CPA2retryWrites=true&w=majority'
-MongoClient.connect(URL, {useUnifiedTopology: true}).then(client => {
+MongoClient.connect(URL, {useUnifiedTopology: true, useNewUrlParser: true}).then(client => {
     console.log('connected to DataBase')
+
+    MongoClient.set('useFindAndModify', false)
+    MongoClient.set('useCreateIndex', true)
 
     const db = client.db('CPA2')
     const quotesCollection = db.collection('quotes')
